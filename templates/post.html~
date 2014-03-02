@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Post</title>
+
+    <!-- Custom styles for this template -->
+	<link rel = stylesheet type = text/css href = "{{ url_for('static',filename='post.css') }}">
+  </head>
+
+	<body>
+    		<div class="post">
+      			<form class="pose_frame" action = "{{url_for('post_rece')}}" method=post>
+				<select name=private id="private" onchange="myFunction()">
+  					<option value="public">public</option>
+  					<option value="private">private</option>
+				</select></br>
+				<p id="demo"></p></br>
+				<textarea name=post></textarea></br>
+				<input type="submit" value="Submit" />
+				<script>
+					function myFunction(){
+						var x = document.getElementById("private").selectedIndex;
+						var y = document.getElementById("private").options;
+						if (y[x].index==1){
+							var txt = "Index: " + y[x].index + " is " + y[x].text;
+							var txt1 = "<select name=private_spc><option value='ofoh'>only friends on my host</option><option value='fof'>friends of friends</option><option value='my friends'>my friends</option><option value='another author'>another author</option><option value='me'>me</option></select></br>";
+							document.getElementById("demo").innerHTML=txt1;
+						}
+						else{
+							document.getElementById("demo").innerHTML="";
+						}
+					}
+				</script>
+      			</form>
+   		 </div>
+  	</body>
+</html>
+
+
