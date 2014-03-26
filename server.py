@@ -1,4 +1,4 @@
-import sqlite3
+asdimport sqlite3
 from flask import Flask, request, redirect, url_for, g, render_template, flash, session, abort
 import sys
 sys.path.append('/home/ouwen/cs410/project/sys/controller')
