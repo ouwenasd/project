@@ -3,7 +3,7 @@ from flask import Flask, request, redirect, url_for, g, render_template, flash, 
 import sys
 sys.path.append('/home/ouwen/cs410/project/sys/controller')
 from authorhelper import *
-asd
+
 DEBUG = True
 SECRET_KEY = 'development key'
 USERNAME = '1@hotmail.com'
